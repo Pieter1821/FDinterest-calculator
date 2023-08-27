@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 
+import "../styles/interestcalculator.css"
+
 function InputField({ label, value, onChange }) {
   return (
     <div className="form-group">
-      <label>{label}</label>
+      <label className="input-label">{label}</label>
       <input
         type="number"
         className="form-control"
@@ -22,7 +24,7 @@ function InterestCalculator() {
   const [error, setError] = useState(null);
 
   const onInputChange = (field, value) => {
-    setError(null); // Clear any previous errors
+    setError(null);
     switch (field) {
       case 'initialAmount':
         setInitialAmount(value);
@@ -62,39 +64,47 @@ function InterestCalculator() {
   };
 
   return (
-    <div>
-      <InputField
-        label="Initial Amount"
-        value={initialAmount}
-        onChange={(e) => onInputChange('initialAmount', e.target.value)}
-      />
-      <InputField
-        label="Interest Rate"
-        value={interestRate}
-        onChange={(e) => onInputChange('interestRate', e.target.value)}
-      />
+    <div className="calculator-container">
+      <h2 className="calculator-title">Interest Calculator</h2>
+
+      <div className="input-fields">
+        <InputField
+          label="Initial Amount"
+          value={initialAmount}
+          onChange={(e) => onInputChange('initialAmount', e.target.value)}
+        />
+        <InputField
+          label="Interest Rate"
+          value={interestRate}
+          onChange={(e) => onInputChange('interestRate', e.target.value)}
+        />
+      </div>
 
       {error && <p className="error-message">{error}</p>}
 
-      <button className="btn btn-primary" onClick={calculateInterest}>
-        Calculate
-      </button>
-      <button className="btn btn-secondary" onClick={resetValues}>
-        Reset
-      </button>
-      <InputField
-        label="Monthly Interest"
-        value={monthlyInterest}
-        onChange={() => {}}
-      />
-      <InputField
-        label="Annual Interest"
-        value={annualInterest}
-        onChange={() => {}}
-      />
+      <div className="button-group">
+        <button className="btn btn-primary" onClick={calculateInterest}>
+          Calculate
+        </button>
+        <button className="btn btn-secondary" onClick={resetValues}>
+          Reset
+        </button>
+      </div>
+
+      <div className="result-fields">
+        <InputField
+          label="Monthly Interest"
+          value={monthlyInterest}
+          onChange={() => {}}
+        />
+        <InputField
+          label="Annual Interest"
+          value={annualInterest}
+          onChange={() => {}}
+        />
+      </div>
     </div>
   );
 }
 
 export default InterestCalculator;
-

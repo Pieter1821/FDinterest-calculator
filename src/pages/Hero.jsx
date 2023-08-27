@@ -2,20 +2,11 @@ import React, { useState } from 'react';
 import { Dialog } from '@headlessui/react';
 
 export default function Hero() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const navigation = [
-    { name: 'Home', href: '#' },
-    { name: 'About', href: '#' },
-    { name: 'Services', href: '#' },
-    { name: 'Contact', href: '#' },
-  ];
-
   return (
-    <div className="bg-white">
+    <div className="bg-gray">
       {/* Header */}
       <header className="absolute inset-x-0 top-0 z-50">
-        {/* ... your header content ... */}
+       
       </header>
 
       {/* Hero Section */}
