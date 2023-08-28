@@ -4,12 +4,13 @@ import About from './pages/About';
 import CalculatorPage from './pages/CalculatorPage';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
-import './App.css';
+import NotFound from './pages/NotFound';
+import './App.scss';
 
 function App() {
   return (
 
-    <div className="container">
+    <div className="app-container">
       <Router>
       <Navbar />
       
@@ -17,6 +18,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/calculator' element={<CalculatorPage />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
       </Router>
     </div>

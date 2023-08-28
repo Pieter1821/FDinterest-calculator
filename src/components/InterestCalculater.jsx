@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import InputField from './InputField'; 
-import "../styles/interestcalculator.css";
+import "../styles/interestcalculator.scss";
 
 function InterestCalculator() {
   const [initialAmount, setInitialAmount] = useState(0);
