@@ -1,24 +1,23 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import {BrowserRouter as Router,Routes, Route} from 'react-router-dom';
-import About from './pages/About';
-import CalculatorPage from './pages/CalculatorPage';
-import Home from './pages/Home';
-import Navbar from './components/Navbar';
-import NotFound from './pages/NotFound';
+import About from "./pages/about";
+import CalculatorPage from "./pages/CalculatorPage";
+import Home from "./pages/Home";
+import Navbar from "./components/navbar";
+import NotFound from "./pages/NotFound";
 import './App.scss';
 
 function App() {
   return (
-
     <div className="app-container">
       <Router>
-      <Navbar />
-      
+        <Navbar />
+
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/calculator' element={<CalculatorPage />} />
-          <Route path='*' element={<NotFound />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/calculator" element={<CalculatorPage />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
     </div>

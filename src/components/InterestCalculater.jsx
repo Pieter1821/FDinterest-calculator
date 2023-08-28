@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import InputField from './InputField'; 
-import "../styles/interestcalculator.scss";
+import InputField from './InputField';
+import '../styles/interestcalculator.scss';
 
 function InterestCalculator() {
   const [initialAmount, setInitialAmount] = useState(0);
@@ -14,7 +14,7 @@ function InterestCalculator() {
     const initialAmountValue = parseFloat(initialAmount);
 
     if (isNaN(initialAmountValue) || isNaN(interestRate)) {
-      setError("Please enter valid numbers for all fields");
+      setError('Please enter valid numbers for all fields');
       setMonthlyInterest(0);
       setAnnualInterest(0);
       return;
@@ -39,16 +39,8 @@ function InterestCalculator() {
     <div className="calculator-container">
       <h2 className="calculator-title">Interest Calculator</h2>
       <div className="input-fields">
-        <InputField
-          label="Deposit Amount"
-          value={initialAmount}
-          onChange={(e) => setInitialAmount(e.target.value)}
-        />
-        <InputField
-          label="Interest Rate"
-          value={interestRate}
-          onChange={(e) => setInterestRate(e.target.value)}
-        />
+        <InputField label="Deposit Amount" value={initialAmount} onChange={(e) => setInitialAmount(e.target.value)} />
+        <InputField label="Interest Rate" value={interestRate} onChange={(e) => setInterestRate(e.target.value)} />
       </div>
 
       {error && <p className="error-message">{error}</p>}
@@ -63,16 +55,8 @@ function InterestCalculator() {
       </div>
 
       <div className="result-fields">
-        <InputField
-          label="Monthly Interest"
-          value={monthlyInterest}
-          onChange={() => {}}
-        />
-        <InputField
-          label="Annual Interest"
-          value={annualInterest}
-          onChange={() => {}}
-        />
+        <InputField label="Monthly Interest" value={monthlyInterest} onChange={() => {}} />
+        <InputField label="Annual Interest" value={annualInterest} onChange={() => {}} />
       </div>
     </div>
   );

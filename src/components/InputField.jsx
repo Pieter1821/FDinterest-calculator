@@ -1,16 +1,10 @@
-
 import PropTypes from 'prop-types';
 
 function InputField({ label, value, onChange }) {
   return (
     <div className="form-group">
       <label className="input-label">{label}</label>
-      <input
-        type="number"
-        className="form-control"
-        value={value}
-        onChange={onChange}
-      />
+      <input type="number" className="form-control" value={value} onChange={onChange} />
     </div>
   );
 }

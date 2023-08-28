@@ -1,14 +1,11 @@
-import InterestCalculator from "../components/InterestCalculater";
+import InterestCalculator from '../components/InterestCalculater';
 
 const CalculatorPage = () => {
-    return (
+  return (
     <div className="calculator-container">
       <InterestCalculator />
     </div>
   );
-
-}
-
-
+};
 
 export default CalculatorPage;
