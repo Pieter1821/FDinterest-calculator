@@ -1,20 +1,6 @@
-import React, { useState } from 'react';
-
-import "../styles/interestcalculator.css"
-
-function InputField({ label, value, onChange }) {
-  return (
-    <div className="form-group">
-      <label className="input-label">{label}</label>
-      <input
-        type="number"
-        className="form-control"
-        value={value}
-        onChange={onChange}
-      />
-    </div>
-  );
-}
+import { useState } from 'react';
+import InputField from './InputField'; 
+import "../styles/interestcalculator.css";
 
 function InterestCalculator() {
   const [initialAmount, setInitialAmount] = useState(0);
@@ -22,20 +8,6 @@ function InterestCalculator() {
   const [monthlyInterest, setMonthlyInterest] = useState(0);
   const [annualInterest, setAnnualInterest] = useState(0);
   const [error, setError] = useState(null);
-
-  const onInputChange = (field, value) => {
-    setError(null);
-    switch (field) {
-      case 'initialAmount':
-        setInitialAmount(value);
-        break;
-      case 'interestRate':
-        setInterestRate(value);
-        break;
-      default:
-        break;
-    }
-  };
 
   const calculateInterest = () => {
     const rate = parseFloat(interestRate) / 100;
@@ -66,17 +38,16 @@ function InterestCalculator() {
   return (
     <div className="calculator-container">
       <h2 className="calculator-title">Interest Calculator</h2>
-
       <div className="input-fields">
         <InputField
-          label="Initial Amount"
+          label="Deposit Amount"
           value={initialAmount}
-          onChange={(e) => onInputChange('initialAmount', e.target.value)}
+          onChange={(e) => setInitialAmount(e.target.value)}
         />
         <InputField
           label="Interest Rate"
           value={interestRate}
-          onChange={(e) => onInputChange('interestRate', e.target.value)}
+          onChange={(e) => setInterestRate(e.target.value)}
         />
       </div>
 
