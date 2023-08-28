@@ -1,0 +1,14 @@
+# netlify.toml
+
+[build]
+  publish = "dist"  # The directory where your Vite build output is located
+  command = "npm run build"  # The command to build your Vite app
+
+[build.environment]
+  NODE_ENV = "production"  # Set the NODE_ENV environment variable to "production"
+
+# Optional: Redirects and Rewrites
+[[redirects]]
+  from = "/*"  # Redirect all paths to index.html for client-side routing
+  to = "/index.html"
+  status = 200
