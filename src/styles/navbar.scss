@@ -1,0 +1,34 @@
+@import 'variables';
+
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    background-color: #4287f5;
+
+}
+
+.links-container {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    width: 100%; 
+    max-width: 1200px; 
+    padding: 5px; 
+    
+
+     a {
+       
+        border: solid 1px white;
+        background-color: $primary-color;
+        text-decoration: none;
+        color: white;
+
+        
+
+}
+    
+    
+}

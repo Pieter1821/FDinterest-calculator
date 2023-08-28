@@ -5,6 +5,7 @@ import CalculatorPage from "./pages/CalculatorPage";
 import Home from "./pages/Home";
 import Navbar from "./components/navbar";
 import NotFound from "./pages/NotFound";
+import Footer from './components/Footer';
 import './App.scss';
 
 function App() {
@@ -18,8 +19,12 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/calculator" element={<CalculatorPage />} />
           <Route path="*" element={<NotFound />} />
+
         </Routes>
+        <Footer />
+
       </Router>
+
     </div>
   );
 }
