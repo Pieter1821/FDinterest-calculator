@@ -1,16 +1,38 @@
 .home-container {
     display: flex;
+    flex-direction: column; 
     justify-content: center; 
     align-items: center; 
     height: 100vh; 
-    width: 100%; 
-    
+    width: 100%;
+    background-image: url('../assets/homepagepic.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    background-attachment: fixed; 
+    opacity: 0.3; 
 
-    background-color: rgba(0, 255, 0, 0.267); 
-    
     h1 {
-        font-size: 24px;
-        color: #333;
+        font-size: 40px; 
+        color: whitesmoke;
         text-align: center;
+        margin-bottom: 20px; 
+    }
+
+    p {
+        font-size: 24px; 
+        color: whitesmoke;
+        text-align: center;
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 32px; 
+            margin-bottom: 10px; 
+        }
+
+        p {
+            font-size: 20px; 
+        }
     }
 }

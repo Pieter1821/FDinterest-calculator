@@ -1,3 +1,4 @@
+import AdSenseComponent from '../components/AdSense';
 import '../styles/About.scss'
 
 
@@ -81,6 +82,7 @@ const About = () => {
           <a href="https://www.skimpy.co.za/Fixed-deposits">Skimpy</a>
         </li>
       </ol>
+      <AdSenseComponent/>
     </div>
   );
 };

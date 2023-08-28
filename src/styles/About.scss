@@ -1,7 +1,74 @@
 @import 'variables';
 
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
 
-.about-container{
-    background-color: $primary-color;
+    @media (max-width: 768px) {
+        padding: 15px; 
+        border-radius: 0; 
+        box-shadow: none; 
+    }
+
+    h2 {
+        margin-top: 20px;
+        font-size: 24px;
+    }
+
+    p {
+        margin-top: 10px;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    a {
+        color: #4287f5;
+        text-decoration: underline;
+    }
+
+    ul {
+        margin-top: 10px;
+        padding-left: 20px;
+    }
+
+    li {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    h4 {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    ol {
+        margin-top: 10px;
+        padding-left: 20px;
+    }
+    .ad-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
     
-}
+        @media (max-width: 768px) {
+          flex-direction: column;
+        }
+      }
+    
+      .ad-image {
+        max-width: 45%;
+        height: auto;
+    
+        @media (max-width: 768px) {
+          max-width: 100%;
+          margin-top: 10px;
+        }
+      }
+    }
+
