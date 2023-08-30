@@ -1,10 +1,11 @@
 import InterestCalculator from '../components/InterestCalculater';
+import { Element } from 'react-scroll';
 
 const CalculatorPage = () => {
   return (
-    <div className="calculator-container">
+    <Element name='calculator' className="calculator-container">
       <InterestCalculator />
-    </div>
+    </Element>
   );
 };
 

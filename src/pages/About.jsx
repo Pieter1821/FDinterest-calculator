@@ -1,10 +1,11 @@
 import AdSenseComponent from '../components/AdSense';
+import { Element } from 'react-scroll';
 import '../styles/About.scss'
 
 
 const About = () => {
   return (
-    <div className="about-container">
+    <Element name='about' className="about-container">
       <h2>Introduction</h2>
       <p>
         Fixed deposits are a popular investment option in South Africa, offering a guaranteed return on your investment.
@@ -82,7 +83,7 @@ const About = () => {
           <a href="https://www.skimpy.co.za/Fixed-deposits">Skimpy</a>
         </li>
       </ol>
-    </div>
+    </Element>
   );
 };
 <AdSenseComponent/>

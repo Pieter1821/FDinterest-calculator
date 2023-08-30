@@ -1,13 +1,13 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import '../styles/navbar.scss'
 
 const navbar = () => {
   return (
     <nav className="navbar-container">
       <div className="links-container">
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/calculator">Calculator</Link>
+        <Link to="/" smooth={true}>Home</Link>
+        <Link to="/about" smooth={true}>About</Link>
+        <Link to="/calculator" smooth={true}>Calculator</Link>
       </div>
     </nav>
   );
