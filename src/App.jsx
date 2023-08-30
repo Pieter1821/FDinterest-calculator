@@ -1,12 +1,15 @@
+import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import About from "./pages/about";
-import CalculatorPage from "./pages/CalculatorPage";
-import Home from "./pages/Home";
-import Navbar from "./components/navbar";
-import NotFound from "./pages/NotFound";
+import Navbar from './components/navbar';
+import NotFound from './pages/NotFound';
 import Footer from './components/Footer';
 import './App.scss';
+
+const Home = React.lazy(() => import('./pages/Home'));
+const About = React.lazy(() => import('./pages/About'));
+const CalculatorPage = React.lazy(() => import('./pages/CalculatorPage'));
+const Spinner = React.lazy(() => import('./components/Spinner'));
 
 function App() {
   return (
@@ -14,17 +17,26 @@ function App() {
       <Router>
         <Navbar />
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/calculator" element={<CalculatorPage />} />
-          <Route path="*" element={<NotFound />} />
+        <Suspense
+          fallback={
+            <div className="Loading">
+              <h1>Loading...</h1>
+              <h2>Please wait...</h2>
 
-        </Routes>
+              <Spinner />
+            </div>
+          }
+        >
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/calculator" element={<CalculatorPage />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
+
         <Footer />
-
       </Router>
-
     </div>
   );
 }
