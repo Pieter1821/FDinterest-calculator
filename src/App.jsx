@@ -16,7 +16,7 @@ function App() {
     <div className="app-container">
       <Router>
         <Navbar />
-
+        
         <Suspense
           fallback={
             <div className="Loading">
@@ -42,3 +42,5 @@ function App() {
 }
 
 export default App;
+
+
