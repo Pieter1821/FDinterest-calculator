@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-const AdSenseComponent = () => {
+const AdSense = () => {
   const adRef = useRef(null);
 
   useEffect(() => {
@@ -34,4 +34,4 @@ const AdSenseComponent = () => {
   );
 };
 
-export default AdSenseComponent;
+export default AdSense;

@@ -1,4 +1,4 @@
-import AdSenseComponent from '../components/AdSense';
+import AdSense from '../components/AdSense';
 import '../styles/About.scss';
 
 const About = () => {
@@ -83,7 +83,7 @@ const About = () => {
           </li>
         </ol>
 
-<AdSenseComponent />
+<AdSense />
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 import './App.scss';
 
 const Home = React.lazy(() => import('./pages/Home'));
-const About = React.lazy(() => import('./pages/About'));
+const About = React.lazy(() => import('./pages/about'));
 const CalculatorPage = React.lazy(() => import('./pages/CalculatorPage'));
 const Spinner = React.lazy(() => import('./components/Spinner'));
 
