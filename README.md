@@ -88,7 +88,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Feel free to explore the app and provide feedback or contributions to make it even better!
 ```
 
-You can copy the entire content above and paste it into your project's README.md file.
-
-
 
