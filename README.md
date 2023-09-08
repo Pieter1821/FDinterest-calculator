@@ -1,5 +1,5 @@
 
-# Interest Calculator App
+# Fixed deposit Interest Calculator App
 
 **A simple interest calculator app** that empowers users to effortlessly calculate interest on fixed deposits, offering both yearly and monthly calculations. Gain deeper insights into your investments with this intuitive tool.
 
